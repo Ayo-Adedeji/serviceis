@@ -8,7 +8,7 @@ const Contacts = () => {
         </div>
 
 
-<div className='flex flex-row mt-20  justify-center gap-20' >
+<div className='grid px-10 sm:grid-cols-2 mt-20 text-center   justify-center gap-20 lg:gap-0' >
         
                 
             <div className='flex flex-col items-center'>
