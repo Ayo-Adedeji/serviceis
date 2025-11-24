@@ -16,11 +16,11 @@ const Contacts = () => {
                 <h1 className='font-semibold text-xl mb-2'>Ibadan</h1>
                 <p>Agboowo Express, Ojo Road, opposite Bovas Filling Station</p>
                 <p>Email: hello@gmail.com</p>
-                <p>Phone: 0812345678</p>
+                <p>Phone: 09133706582</p>
                  <h1 className='mt-10 font-semibold text-xl mb-2'>Lagos</h1>
                 <p>Address: Computer Village, Ikeja.</p>
                 <p>Email: hello@gmail.com</p>
-                <p>Phone: 0812345678</p>
+                <p>Phone: 09133706582</p>
             </div>
         
 
@@ -31,11 +31,11 @@ const Contacts = () => {
           <h1 className='font-semibold text-xl mb-2'>Ibadan</h1>
                 <p>Agboowo Express, Ojo Road, opposite Bovas Filling Station</p>
                 <p>Email: hello@gmail.com</p>
-                <p>Phone: 0812345678</p>
-                <p>Company ccode: 123456</p>
+                <p>Phone: 09133706582</p>
+                {/* <p>Company ccode: 123456</p>
                  <h1 className='mt-10 font-semibold text-xl '>Access Bank</h1>
         <p>ServiceIS LTD</p>
-        <p>0012345678</p>
+        <p>0012345678</p> */}
     </div>
 
 
