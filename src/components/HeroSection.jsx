@@ -38,10 +38,17 @@ const HeroSection = () => {
                 </span>
               </div>
               <div className="border rounded-b-lg bg-blue-950 h-10 flex items-center justify-center text-white w-full">
-                <a className="flex items-center gap-2 text-xl">
-                  <FaArrowAltCircleRight />
-                </a>
-              </div>
+  {title === "REGISTER REPAIR" ? (
+    <a href="/register-repair" className="flex items-center gap-2 text-xl">
+      <FaArrowAltCircleRight />
+    </a>
+  ) : (
+    <a href="#" className="flex items-center gap-2 text-xl">
+      <FaArrowAltCircleRight />
+    </a>
+  )}
+</div>
+
             </div>
           ))}
         </div>
@@ -61,11 +68,18 @@ const HeroSection = () => {
                   <FaToolbox />
                 </span>
               </div>
-              <div className="border rounded-b-lg bg-blue-950 h-12 flex items-center justify-center text-white w-full">
-                <a className="flex items-center gap-3 text-2xl">
-                  <FaArrowAltCircleRight />
-                </a>
-              </div>
+              <div className="border rounded-b-lg bg-blue-950 h-10 flex items-center justify-center text-white w-full">
+  {title === "REGISTER REPAIR" ? (
+    <a href="/register-repair" className="flex items-center gap-2 text-xl">
+      <FaArrowAltCircleRight />
+    </a>
+  ) : (
+    <a href="#" className="flex items-center gap-2 text-xl">
+      <FaArrowAltCircleRight />
+    </a>
+  )}
+</div>
+
             </div>
           ))}
         </div>
@@ -83,11 +97,18 @@ const HeroSection = () => {
                   <FaToolbox />
                 </span>
               </div>
-              <div className="border rounded-b-lg bg-blue-950 h-12 flex items-center justify-center text-white w-full">
-                <a className="flex items-center gap-3 text-2xl">
-                  <FaArrowAltCircleRight />
-                </a>
-              </div>
+              <div className="border rounded-b-lg bg-blue-950 h-10 flex items-center justify-center text-white w-full">
+  {title === "REGISTER REPAIR" ? (
+    <a href="/register-repair" className="flex items-center gap-2 text-xl">
+      <FaArrowAltCircleRight />
+    </a>
+  ) : (
+    <a href="#" className="flex items-center gap-2 text-xl">
+      <FaArrowAltCircleRight />
+    </a>
+  )}
+</div>
+
             </div>
           ))}
         </div>

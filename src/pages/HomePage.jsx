@@ -15,7 +15,6 @@ const HomePage = () => {
         <Centres/>
         <Contacts/>
         <Footer/>
-        
     </div>
   )
 }
