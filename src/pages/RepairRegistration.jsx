@@ -44,13 +44,11 @@ export default function RepairRegistration() {
         }
       });
 
-      const response = await fetch(
-        "http://localhost:4000/api/repair-registration",
-        {
-          method: "POST",
-          body,
-        }
-      );
+    const response = await fetch("/api/repair-registration", {
+  method: "POST",
+  body,
+});
+
 
       const result = await response.json();
 

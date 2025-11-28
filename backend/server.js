@@ -1,15 +1,18 @@
 import express from "express";
 import multer from "multer";
 import cors from "cors";
+import path from "path";
+import { fileURLToPath } from "url";
 import { connectDB } from "./db.js";
 import { Repair } from "./models/Repair.js";
 import { generateReference } from "./utils/generateReference.js";
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
 app.use(cors());
-
-// ✅ connect to MongoDB
-await connectDB();
+app.use(express.json());
 
 // ✅ Multer setup
 const storage = multer.diskStorage({
@@ -18,7 +21,7 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
-// ✅ Route
+// ✅ API Route
 app.post("/api/repair-registration", upload.array("files", 5), async (req, res) => {
   try {
     const reference = generateReference();
@@ -40,4 +43,21 @@ app.post("/api/repair-registration", upload.array("files", 5), async (req, res) 
   }
 });
 
-app.listen(4000, () => console.log("Server running on http://localhost:4000"));
+// ✅ Serve Vite frontend build
+app.use(express.static(path.join(__dirname, "dist")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
+});
+
+// ✅ Start server after DB connection
+const PORT = process.env.PORT || 4000;
+
+connectDB()
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`🚀 Server running on port ${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.error("❌ Failed to connect to MongoDB:", err);
+  });
