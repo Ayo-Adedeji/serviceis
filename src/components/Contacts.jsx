@@ -14,12 +14,12 @@ const Contacts = () => {
             <div className='flex flex-col items-center'>
                 <h1 className='font-bold text-2xl mb-7'>Service locations</h1>
                 <h1 className='font-semibold text-xl mb-2'>Ibadan</h1>
-                <p>Agboowo Express, Ojo Road, opposite Bovas Filling Station</p>
-                <p>Email: hello@gmail.com</p>
+                <p>No 2, Agricola street, Opposite UI second gate</p>
+                <p>Email: support@ictweare.com</p>
                 <p>Phone: 09133706582</p>
                  <h1 className='mt-10 font-semibold text-xl mb-2'>Lagos</h1>
                 <p>Address: Computer Village, Ikeja.</p>
-                <p>Email: hello@gmail.com</p>
+                <p>Email: support@ictweare.com</p>
                 <p>Phone: 09133706582</p>
             </div>
         
@@ -29,8 +29,8 @@ const Contacts = () => {
     <div className='flex flex-col items-center'>
         <h1 className='font-bold text-2xl mb-7'>Administration</h1>
           <h1 className='font-semibold text-xl mb-2'>Ibadan</h1>
-                <p>Agboowo Express, Ojo Road, opposite Bovas Filling Station</p>
-                <p>Email: hello@gmail.com</p>
+                {/* <p>Agboowo Express, Ojo Road, opposite Bovas Filling Station</p> */}
+                <p>Email: support@ictweare.com</p>
                 <p>Phone: 09133706582</p>
                 {/* <p>Company ccode: 123456</p>
                  <h1 className='mt-10 font-semibold text-xl '>Access Bank</h1>

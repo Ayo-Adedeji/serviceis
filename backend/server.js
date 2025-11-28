@@ -21,15 +21,23 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
+// ✅ Router mounted at /register-repair
+const router = express.Router();
+
+// ✅ Test route
+router.get("/ping", (req, res) => {
+  res.send("pong");
+});
+
 // ✅ API Route
-app.post("/api/repair-registration", upload.array("files", 5), async (req, res) => {
+router.post("/api/repair-registration", upload.array("files", 5), async (req, res) => {
   try {
     const reference = generateReference();
     const files = (req.files || []).map((f) => f.filename);
 
     const repair = new Repair({
       reference,
-      ...req.body,
+      ...(req.body || {}),   // avoids spreading undefined
       files,
       status: "Pending",
     });
@@ -38,16 +46,21 @@ app.post("/api/repair-registration", upload.array("files", 5), async (req, res) 
 
     res.json({ success: true, reference, message: "Repair registration saved" });
   } catch (err) {
-    console.error(err);
+    console.error("Error in /api/repair-registration:", err);
     res.status(500).json({ success: false, message: "Error saving repair" });
   }
 });
 
 // ✅ Serve Vite frontend build
-app.use(express.static(path.join(__dirname, "dist")));
-app.get("*", (req, res) => {
+router.use(express.static(path.join(__dirname, "dist")));
+
+// ✅ Catch‑all for SPA routes
+router.get(/.*/, (req, res) => {
   res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
+
+// ✅ Mount router at /register-repair
+app.use("/register-repair", router);
 
 // ✅ Start server after DB connection
 const PORT = process.env.PORT || 4000;
