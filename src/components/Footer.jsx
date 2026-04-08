@@ -42,7 +42,7 @@ const Footer = () => {
             </a>
             <span className="flex items-center gap-3 text-white/60 text-sm">
               <FaMapMarkerAlt className="text-blue-400 flex-shrink-0" />
-              Ibadan &amp; Lagos, Nigeria
+              Computer Village, Ikeja, Lagos
             </span>
           </div>
         </div>
