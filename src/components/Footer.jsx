@@ -32,9 +32,9 @@ const Footer = () => {
             Private IT department for modern homes and individuals. Premium, discreet, and trusted digital support.
           </p>
           <div className="flex flex-col gap-3 mt-2">
-            <a href="mailto:hello@serviceis.com" className="flex items-center gap-3 text-white/60 hover:text-blue-400 transition-colors text-sm">
+            <a href="mailto:ictweare.support@ictweare.com" className="flex items-center gap-3 text-white/60 hover:text-blue-400 transition-colors text-sm">
               <FaEnvelope className="text-blue-400 flex-shrink-0" />
-              hello@serviceis.com
+              ictweare.support@ictweare.com
             </a>
             <a href="tel:09133706582" className="flex items-center gap-3 text-white/60 hover:text-blue-400 transition-colors text-sm">
               <FaPhone className="text-blue-400 flex-shrink-0" />
