@@ -116,7 +116,8 @@ function ContactSection() {
 
                 {/* Submit */}
                 <button
-                  type="submit"
+                  type="button"
+                  onClick={() => document.getElementById('get-started')?.scrollIntoView({ behavior: 'smooth' })}
                   className="w-full bg-white text-[#0A0F1E] font-semibold py-3 rounded-lg hover:bg-white/90 transition mt-2"
                 >
                   Enquire Now

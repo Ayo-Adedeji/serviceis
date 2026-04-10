@@ -102,7 +102,7 @@ const HeroSection = () => {
           {/* CTA buttons */}
           <div className="flex flex-wrap gap-4 mt-2">
             <a
-              href="#contact"
+              href="#get-started"
               className="px-6 py-3 rounded-lg bg-white text-[#0A0F1E] font-semibold text-sm tracking-wide hover:bg-white/90 transition-colors duration-200 shadow-lg"
             >
               Book Initial Digital Review

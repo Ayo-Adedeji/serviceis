@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../assets/SIS-TRT-B-.png';
 import {
   FaShieldAlt,
   FaQuestionCircle,
@@ -27,7 +28,7 @@ const Footer = () => {
 
         {/* Brand column */}
         <div className="flex flex-col gap-4">
-          <span className="text-white font-bold text-2xl tracking-wide">ServiceIS</span>
+          <img src={logo} alt="ServiceIS" className="h-10 w-auto" />
           <p className="text-white/50 text-sm leading-relaxed">
             Private IT department for modern homes and individuals. Premium, discreet, and trusted digital support.
           </p>

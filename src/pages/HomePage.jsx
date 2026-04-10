@@ -12,6 +12,8 @@ import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 
+import GetStarted from '../components/GetStarted';
+
 const HomePage = () => {
   const valuesRef = useScrollAnimation(0.1, { single: true });
   const centresRef = useScrollAnimation(0.1, { single: true });
@@ -21,6 +23,7 @@ const HomePage = () => {
     <div className="pt-16">
       <Navbar />
       <HeroSection />
+      <GetStarted />
       <WhatWeDo />
       <WhoItsFor />
       <HowItWorks />
